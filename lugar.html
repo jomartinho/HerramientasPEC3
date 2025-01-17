@@ -24,9 +24,6 @@
                 <text x="100" y="62" text-anchor="middle" font-size="16" fill="#FFFFFF" font-weight="bold">PORTUGAL</text>
             </svg>
           </div>
-          
-          
-          
           <nav>
             <ul>
               <li><a href="index.html">Inicio</a></li>
@@ -43,7 +40,7 @@
     <div class="container">
       <h1>Torre de Belém</h1>
       <figure class="highlight">
-        <img loading="lazy" loading="lazy" loading="lazy" src="img/TorreDeBelem.webp" alt="Vista de la Torre de Belém en Lisboa">
+        <img loading="lazy" src="img/TorreDeBelem.webp" alt="Vista de la Torre de Belém en Lisboa" width="600" height="400">
         <figcaption>La Torre de Belém, un ícono histórico de Lisboa, a orillas del río Tajo.</figcaption>
       </figure>
       <article>
@@ -85,8 +82,8 @@
       <p>&copy; 2024 Descubre Portugal. Todos los derechos reservados.</p>
       <nav>
         <ul>
-          <li><a href="">Política de Privacidad</a></li>
-          <li><a href="">Contacto</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Contacto</a></li>
         </ul>
       </nav>
     </div>
@@ -201,6 +198,7 @@
     footer a {
       color: #fff;
       text-decoration: underline;
+      margin: 0.5rem;
     }
     
     footer a:hover {
@@ -208,8 +206,12 @@
     }
     
     @media (max-width: 768px) {
+      nav ul li a {
+  padding: 1rem 2rem;
+}
       h1 {
         font-size: 2rem;
+        color: #222;
       }
     
       h2 {
@@ -224,6 +226,8 @@
         padding: 0.7rem 1.2rem;
         font-size: 0.9rem;
       }
+      footer p {
+        color: #ddd;
+      }
     }
-    
-    </style>
+</style>
