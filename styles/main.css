@@ -1,0 +1,395 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+p, a, li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400; 
+}
+
+.container {
+  display: grid;
+}
+
+button {
+  background-color: #6c757d; 
+  color: #f4f4f4;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+button:hover {
+  background-color: #5a6268;
+}
+
+header {
+  background: #333; 
+  color: #f4f4f4;
+  padding: 1rem 0;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+header nav ul li {
+  margin: 0 1rem;
+}
+header nav ul li a {
+  color: #f4f4f4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #6c757d;
+}
+header h1 {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+}
+header p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.logo {
+  justify-self: center;
+}
+.logo svg {
+  animation: pulse 2s infinite;
+}
+
+main {
+  padding: 2rem;
+}
+main section {
+  margin-bottom: 2rem;
+}
+main section h2 {
+  color: #333; 
+  border-bottom: 2px solid #6c757d;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+main section p {
+  margin-bottom: 1rem;
+}
+main section ul {
+  list-style: none;
+}
+main section ul li {
+  margin: 0.5rem 0;
+}
+main section ul li a {
+  color: #333;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+main section ul li a:hover {
+  color: #6c757d;
+}
+main section img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background: #333;
+  color: #f4f4f4;
+  padding: 1rem 0;
+  text-align: center;
+}
+footer nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding:5px;
+}
+
+footer nav ul li {
+  margin: 0 0.5rem;
+}
+footer nav ul li a {
+  color: #f4f4f4;
+  text-decoration: none;
+}
+footer nav ul li a:hover {
+  color: #6c757d;
+}
+footer p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  padding:5px;
+}
+
+.featured-content {
+  margin: 20px 0;
+}
+
+.featured-food {
+  margin: 20px 0;
+}
+.swiper-container {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: auto;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.swiper-slide h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.swiper-slide p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.swiper-slide img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+  main {
+    padding: 1rem;
+  }
+}
+
+.featured-food, .featured-content {
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+}
+
+.featured-food .container, .featured-content .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.featured-food h2, .featured-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.food-grid, .content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.food-grid article, .content-grid article {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-grid article:hover, .content-grid article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.food-grid img, .content-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 3px solid #ddd;
+}
+
+.food-grid h3, .content-grid h3 {
+  font-size: 1.4rem;
+  margin: 1rem;
+  color: #1680285d;
+}
+
+.food-grid p, .content-grid p {
+  font-size: 1rem;
+  margin: 0 1rem 1rem;
+  color: #666;
+}
+
+.food-grid .btn, .content-grid .btn {
+  display: inline-block;
+  margin: 0 1rem 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #1680285d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.food-grid .btn:hover, .content-grid .btn:hover {
+  background-color: #1680285d;
+}
+
+@media (max-width: 768px) {
+  .food-grid, .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.food-grid img, .content-grid img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.historical-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+
+.enlaces {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+}
+
+.enlaces h1 {
+  font-size: 2rem;
+  color: #1680285d;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #1680285d;
+  padding-bottom: 0.5rem;
+}
+
+.enlaces p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.enlaces ul {
+  max-width: 800px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.enlaces ul li {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.enlaces ul li:last-child {
+  border-bottom: none;
+}
+
+.enlaces ul li a {
+  text-decoration: none;
+  color: #1680285d;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.enlaces ul li a:hover {
+  color: #1680285d;
+}
+
+.enlaces ul li:hover {
+  background-color: #f8f9fa;
+}
+
+.highlight {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.highlight img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.highlight figcaption {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+}
+
